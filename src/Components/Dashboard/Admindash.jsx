@@ -31,11 +31,14 @@ const AdminDashboard = () => {
     name: "",
     price: "",
     image: "",
+
+    description: "",
   });
 
   const toggleForm = () => {
     setShowForm(!showForm);
     setNewItem({ id: null, name: "", price: "", image: "" }); // Reset the input fields
+    setNewItem({ id: null, name: "", price: "", image: "", description: "" }); // Reset the input fields
   };
 
   // Handle Image Upload
@@ -122,6 +125,16 @@ const AdminDashboard = () => {
             value={newItem.price}
             onChange={(e) => setNewItem({ ...newItem, price: e.target.value })}
           />
+
+          <input
+            type="text"
+            placeholder="Description"
+            value={newItem.description}
+            onChange={(e) =>
+              setNewItem({ ...newItem, description: e.target.value })
+            }
+          />
+
           <input type="file" accept="image/*" onChange={handleImageChange} />
           {newItem.image && (
             <img src={newItem.image} alt="Preview" className="image-preview" />

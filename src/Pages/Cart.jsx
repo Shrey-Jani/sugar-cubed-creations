@@ -26,12 +26,22 @@ const Cart = () => {
             <p>${parseFloat(item.new_price).toFixed(2)}</p>
 
             <div className="quantity-control">
-              <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
+              <button
+                onClick={() => updateQuantity(item.id, item.quantity - 1)}
+              >
+                -
+              </button>
               <span>{item.quantity}</span>
-              <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
+              <button
+                onClick={() => updateQuantity(item.id, item.quantity + 1)}
+              >
+                +
+              </button>
             </div>
 
-            <button onClick={() => removeFromCart(item.id)} className="remove">Remove</button>
+            <button onClick={() => removeFromCart(item.id)} className="remove">
+              Remove
+            </button>
           </div>
         </div>
       ))}
