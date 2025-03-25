@@ -10,7 +10,7 @@ export const LoginSignup = () => {
   const handleLogin = () => {
     // Replace with your admin credentials
     const adminCredentials = {
-      username: "janishre",
+      username: "admin",
       password: "1234",
     };
 
